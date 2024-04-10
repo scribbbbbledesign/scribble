@@ -48,7 +48,6 @@ body {
     }
 
     .block {
-        opacity: 0;
         box-shadow: 1vw 1vw 2vw #d1d4df, -1vw -1vw 2vw #f5f8ff;
         border-radius: 3vw;
     }
