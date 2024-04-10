@@ -1,0 +1,44 @@
+.ancestor {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    vertical-align: middle;
+}
+
+.con {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+@media (orientation: landscape) {
+    .con {
+        width: 90vh;
+        height: 90vh;
+    }
+}
+
+@media (orientation: portrait) {
+    .con {
+        width: 90vw;
+        height: 90vw;
+    }
+}
+
+.block {
+    border-radius: 15px;
+    background: #e3e6f2;
+    box-shadow: 5px 5px 10px #d1d4df, -5px -5px 10px #f5f8ff;
+}
+
+@font-face {
+    font-family: avant;
+    src: url(ITC\ Avant\ Garde\ Gothic\ Demi/avantgarde_demi.ttf);
+}
