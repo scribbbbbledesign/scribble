@@ -1,5 +1,5 @@
 body {
-    backdrop-filter: brightness(/*value to change on slider from 10% to 100%*/100%);
+    backdrop-filter: brightness(var(--bri) /*value to change on slider from 10% to 100%*/);
 }
 
 .ancestor {
@@ -37,6 +37,8 @@ body {
     .brightrange {
         border-radius: 3vh;
     }
+
+
 }
 
 @media (orientation: portrait) {
@@ -55,6 +57,7 @@ body {
     .brightrange {
         border-radius: 3vw;
     }
+
 }
 
 .block {
@@ -66,12 +69,8 @@ body {
     src: url(ITC\ Avant\ Garde\ Gothic\ Demi/avantgarde_demi.ttf);
 }
 
-#brightrange::-webkit-slider-thumb {
-    
-}
-
 .brightrange {  
-    -webkit-appearance: none;
+    appearance: none;
     outline: none;
     background: rgba(62, 151, 78, 0);
     width: 100%;
@@ -88,3 +87,51 @@ body {
     cursor: pointer;
     opacity: 100%;
 }
+
+.checkbox {
+    display: none;
+  }
+  
+  .slider {
+    margin-top: 6.5vh;
+    rotate: 90deg;
+    width: 6vh;
+    height: 3vh;
+    background-color: #c5cad9;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border: 0px solid transparent;
+    transition: .3s;
+    box-shadow: inset 0.1vh 0.1vh 1vh #a7acb8, inset -0.1vh -0.1vh 1vh #e3e8fa;
+    cursor: pointer;
+    padding: 0.5vh;
+  }
+  
+  .slider::before {
+    content: '';
+    display: block;
+    width: 2vh;
+    height: 100%;
+    background-color: #e3e6f2;
+    transform: translateX(0vh);
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 0.1vh 0.1vh 1vh #c1c4ce, -0.1vh -0.1vh 1vh #ffffff;;
+  }
+  
+  .checkbox:checked ~ .slider::before {
+    transform: translateX(3vh);
+    box-shadow: 0 0 2vh 1vh #d1d4df;
+  }
+  
+  .checkbox:checked ~ .slider {
+    background-color: #ebedf5;
+  }
+  /*Color when enabled*/
+  
+  .checkbox:active ~ .slider::before {
+    transform: translate(0);
+    box-shadow: 0.1vh 0.1vh 1vh #c8c9d0, -0.1vh -0.1vh 1vh #ffffff;
+  }
