@@ -38,7 +38,31 @@ body {
         border-radius: 3vh;
     }
 
+    .slider {
+        margin-top: 6.5vh;
+        width: 6vh;
+        height: 3vh;
+        border-radius: 5vh;
+        border: 0px solid transparent;
+        box-shadow: inset 0.1vh 0.1vh 1vh #a7acb8, inset -0.1vh -0.1vh 1vh #e3e8fa;
+        padding: 0.5vh;
+    }
 
+    .slider::before {
+        width: 2vh;
+        transform: translateX(0vh);
+        border-radius: 5vh;
+        box-shadow: 0.1vh 0.1vh 1vh #c1c4ce, -0.1vh -0.1vh 1vh #ffffff;;
+    }
+
+    .checkbox:checked ~ .slider::before {
+        box-shadow: 0 0 2vh 1vh #d1d4df;
+    }
+
+    .checkbox:active ~ .slider::before {
+        transform: translate(0);
+        box-shadow: 0.1vh 0.1vh 1vh #c8c9d0, -0.1vh -0.1vh 1vh #ffffff;
+    }
 }
 
 @media (orientation: portrait) {
@@ -56,6 +80,32 @@ body {
 
     .brightrange {
         border-radius: 3vw;
+    }
+
+    .slider {
+        margin-top: 6.5vw;
+        width: 6vw;
+        height: 3vw;
+        border-radius: 5vw;
+        border: 0px solid transparent;
+        box-shadow: inset 0.1vw 0.1vw 1vw #a7acb8, inset -0.1vw -0.1vw 1vw #e3e8fa;
+        padding: 0.5vw;
+    }
+
+    .slider::before {
+        width: 2vw;
+        transform: translateX(0vw);
+        border-radius: 5vw;
+        box-shadow: 0.1vw 0.1vw 1vw #c1c4ce, -0.1vw -0.1vw 1vw #ffffff;;
+    }
+
+    .checkbox:checked ~ .slider::before {
+        box-shadow: 0 0 2vw 1vw #d1d4df;
+    }
+
+    .checkbox:active ~ .slider::before {
+        transform: translate(0);
+        box-shadow: 0.1vw 0.1vw 1vw #c8c9d0, -0.1vw -0.1vw 1vw #ffffff;
     }
 
 }
@@ -92,46 +142,46 @@ body {
     display: none;
   }
   
-  .slider {
-    margin-top: 6.5vh;
+.slider {
+    /*margin-top: 6.5vh;*/
     rotate: 90deg;
-    width: 6vh;
-    height: 3vh;
+    /*width: 6vh;*/
+    /*height: 3vh;*/
     background-color: #c5cad9;
-    border-radius: 20px;
+    /*border-radius: 20px;*/
     overflow: hidden;
     display: flex;
     align-items: center;
     border: 0px solid transparent;
     transition: .3s;
-    box-shadow: inset 0.1vh 0.1vh 1vh #a7acb8, inset -0.1vh -0.1vh 1vh #e3e8fa;
+    /*box-shadow: inset 0.1vh 0.1vh 1vh #a7acb8, inset -0.1vh -0.1vh 1vh #e3e8fa;*/
     cursor: pointer;
-    padding: 0.5vh;
-  }
-  
-  .slider::before {
+    /*padding: 0.5vh;*/
+}
+
+.slider::before {
     content: '';
     display: block;
-    width: 2vh;
+    /*width: 2vh;*/
     height: 100%;
     background-color: #e3e6f2;
-    transform: translateX(0vh);
-    border-radius: 20px;
+    /*transform: translateX(0vh);*/
+    /*border-radius: 20px;*/
     transition: .3s;
-    box-shadow: 0.1vh 0.1vh 1vh #c1c4ce, -0.1vh -0.1vh 1vh #ffffff;;
-  }
-  
-  .checkbox:checked ~ .slider::before {
-    transform: translateX(3vh);
+    /*box-shadow: 0.1vh 0.1vh 1vh #c1c4ce, -0.1vh -0.1vh 1vh #ffffff;;*/
+}
+
+.checkbox:checked ~ .slider::before {
+    /*transform: translateX(3vh);*/
     box-shadow: 0 0 2vh 1vh #d1d4df;
-  }
-  
-  .checkbox:checked ~ .slider {
+}
+
+.checkbox:checked ~ .slider {
     background-color: #ebedf5;
-  }
-  /*Color when enabled*/
-  
-  .checkbox:active ~ .slider::before {
+}
+/*Color when enabled*/
+
+.checkbox:active ~ .slider::before {
     transform: translate(0);
-    box-shadow: 0.1vh 0.1vh 1vh #c8c9d0, -0.1vh -0.1vh 1vh #ffffff;
-  }
+    /*box-shadow: 0.1vh 0.1vh 1vh #c8c9d0, -0.1vh -0.1vh 1vh #ffffff;*/
+}
