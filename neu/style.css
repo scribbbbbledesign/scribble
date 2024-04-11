@@ -51,7 +51,7 @@ body {
     .slider::before {
         width: 2vh;
         border-radius: 5vh;
-        box-shadow: 0.1vh 0.1vh 1vh #c1c4ce, -0.1vh -0.1vh 1vh #ffffff;;
+        box-shadow: 0.1vh 0.1vh 1vh #9699a0, -0.1vh -0.1vh 1vh #ffffff;;
     }
 
 
@@ -94,7 +94,7 @@ body {
     .slider::before {
         width: 2vw;
         border-radius: 5vw;
-        box-shadow: 0.1vw 0.1vw 1vw #c1c4ce, -0.1vw -0.1vw 1vw #ffffff;;
+        box-shadow: 0.1vw 0.1vw 1vw #9699a0, -0.1vw -0.1vw 1vw #ffffff;;
     }
 
 
@@ -146,7 +146,7 @@ body {
     rotate: 90deg;
     /*width: 6vh;*/
     /*height: 3vh;*/
-    background-color: #c5cad9;
+    background-color: #e3e6f2;
     /*border-radius: 20px;*/
     overflow: hidden;
     display: flex;
