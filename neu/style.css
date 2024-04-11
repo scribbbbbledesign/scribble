@@ -50,18 +50,17 @@ body {
 
     .slider::before {
         width: 2vh;
-        transform: translateX(0vh);
         border-radius: 5vh;
         box-shadow: 0.1vh 0.1vh 1vh #c1c4ce, -0.1vh -0.1vh 1vh #ffffff;;
     }
 
-    .checkbox:checked ~ .slider::before {
-        box-shadow: 0 0 2vh 1vh #d1d4df;
-    }
 
     .checkbox:active ~ .slider::before {
-        transform: translate(0);
         box-shadow: 0.1vh 0.1vh 1vh #c8c9d0, -0.1vh -0.1vh 1vh #ffffff;
+    }
+
+    .checkbox:checked ~ .slider::before {
+        transform: translateX(3vh);
     }
 }
 
@@ -94,18 +93,18 @@ body {
 
     .slider::before {
         width: 2vw;
-        transform: translateX(0vw);
         border-radius: 5vw;
         box-shadow: 0.1vw 0.1vw 1vw #c1c4ce, -0.1vw -0.1vw 1vw #ffffff;;
     }
 
-    .checkbox:checked ~ .slider::before {
-        box-shadow: 0 0 2vw 1vw #d1d4df;
-    }
+
 
     .checkbox:active ~ .slider::before {
-        transform: translate(0);
         box-shadow: 0.1vw 0.1vw 1vw #c8c9d0, -0.1vw -0.1vw 1vw #ffffff;
+    }
+
+    .checkbox:checked ~ .slider::before {
+        transform: translateX(3vw);
     }
 
 }
@@ -172,8 +171,8 @@ body {
 }
 
 .checkbox:checked ~ .slider::before {
-    /*transform: translateX(3vh);*/
-    box-shadow: 0 0 2vh 1vh #d1d4df;
+    /*transform: translateX(3vh);
+    box-shadow: 0 0 2vh 1vh #d1d4df;*/
 }
 
 .checkbox:checked ~ .slider {
