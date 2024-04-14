@@ -64,7 +64,7 @@
 .blockint:active {
     box-shadow: inset 10px 10px 20px #d1d4df, inset -10px -10px 20px #f5f8ff;
     transition: 0.3s;
-    filter: brightness(90%);
+    filter: brightness(100%);
 }
 
 @font-face {
