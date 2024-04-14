@@ -21,7 +21,6 @@
 
 .ancestor {
     border: 1px solid green;
-
     position: relative;
     vertical-align: middle;
 }
@@ -47,6 +46,25 @@
     box-shadow: 10px 10px 20px #d1d4df, -10px -10px 20px #f5f8ff;
     border-radius: 30px;
     background: #e3e6f200;
+}
+
+.blockint {
+    box-shadow: 10px 10px 20px #d1d4df, -10px -10px 20px #f5f8ff;
+    border-radius: 30px;
+    background: #e3e6f200;
+    transition: 0.5s;
+}
+
+.blockint:hover {
+    box-shadow: 1px 1px 2px #d1d4df, -1px -1px 2px #f5f8ff;
+    transition: 0.1s;
+    filter: opacity(70%);
+}
+
+.blockint:active {
+    box-shadow: inset 10px 10px 20px #d1d4df, inset -10px -10px 20px #f5f8ff;
+    transition: 0.3s;
+    filter: brightness(90%);
 }
 
 @font-face {
@@ -87,7 +105,7 @@
     border-radius: 20px;
     border: 0px solid transparent;
     box-shadow: inset 1px -1px 10px #a7acb8, inset -1px 1px 10px #e3e8fa;
-    padding: 3px;
+    padding: 6px;
 
     background-color: #e3e6f2;
 
