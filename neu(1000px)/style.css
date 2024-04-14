@@ -19,6 +19,27 @@
     .ancestor {width: 100vw; height: 100vh;}
 }
 
+@media only screen and (orientation: landscape) and (max-height: 1000px) { 
+    body { zoom: 50%; }
+    .ancestor {width: 200vw; height: 200vh;}
+}
+
+@media only screen and (orientation: landscape) and (min-height: 1001px) { 
+    body { zoom: 100%; }
+    .ancestor {width: 100vw; height: 100vh;}
+}
+
+@media only screen and (orientation: portrait) and (max-width: 1000px) { 
+    body { zoom: 50%; }
+    .ancestor {width: 200vw; height: 200vh;}
+}
+
+
+@media only screen and (orientation: portrait) and (min-width: 1001px) { 
+    body { zoom: 100%; }
+    .ancestor {width: 100vw; height: 100vh;}
+}
+
 .ancestor {
     border: 0px solid green;
     position: relative;
