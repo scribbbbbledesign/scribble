@@ -1,7 +1,6 @@
-@media screen and (max-height: 1000px) { 
-    .ancestor { zoom: 60%; }
-
-}
+@media screen and (min-height: 1000px) { 
+    html { zoom: 150%; } 
+    }
 
 .ancestor {
     width: 100vw;
@@ -11,24 +10,25 @@
 }
 
 .con {
+    border: 1px solid red;
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: grid;
-    width: 1000px;
-    height: 1000px;
-    column-gap: 20px;
-    row-gap: 20px;
+    width: 500px;
+    height: 500px;
+    column-gap: 10px;
+    row-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
 }
 
 .block {
-    box-shadow: 10px 10px 20px #d1d4df, -10px -10px 20px #f5f8ff;
-    border-radius: 30px;
+    box-shadow: 5px 5px 10px #d1d4df, -5px -5px 10px #f5f8ff;
+    border-radius: 15px;
     background: #e3e6f200;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .brightrange {  
-    border-radius: 30px;
+    border-radius: 15px;
     appearance: none;
     outline: none;
     background: rgba(62, 151, 78, 0);
@@ -64,13 +64,13 @@
 .slider {
 
     rotate: 90deg;
-    margin-top: 70px;
-    width: 80px; /*6vh*/
-    height: 40px; /*3vh*/
-    border-radius: 20px;
+    margin-top: 35px;
+    width: 40px; /*6vh*/
+    height: 20px; /*3vh*/
+    border-radius: 10px;
     border: 0px solid transparent;
-    box-shadow: inset 1px -1px 10px #a7acb8, inset -1px 1px 10px #e3e8fa;
-    padding: 6px;
+    box-shadow: inset 0.5px -0.5px 5px #a7acb8, inset -0.5px 0.5px 5px #e3e8fa;
+    padding: 3px;
 
     background-color: #e3e6f2;
 
@@ -86,8 +86,8 @@
 
 .slider::before {
     aspect-ratio: 1/1;
-    border-radius: 20px;
-    box-shadow: 1px -1px 10px #9699a0, -1px 1px 10px #ffffff;
+    border-radius: 10px;
+    box-shadow: 0.5px -0.5px 5px #9699a0, -0.5px 0.5px 5px #ffffff;
     content: '';
     display: block;
 
@@ -99,7 +99,7 @@
 }
 
 .checkbox:checked ~ .slider::before {
-    transform: translateX(40px);
+    transform: translateX(20px);
 }
 
 .checkbox:checked ~ .slider {
@@ -109,5 +109,5 @@
 
 .checkbox:active ~ .slider::before {
     transform: translate(0);
-    box-shadow: 1px -1px 10px #c8c9d0, 1px -1px 10px #ffffff;
+    box-shadow: 0.5px 0.5px 5px #c8c9d0, -0.5px -0.5px 5px #ffffff;
 }
