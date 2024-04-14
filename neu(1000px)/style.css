@@ -20,13 +20,13 @@
 }
 
 .ancestor {
-    border: 1px solid green;
+    border: 0px solid green;
     position: relative;
     vertical-align: middle;
 }
 
 .con {
-    border: 1px solid red;
+    border: 0px solid red;
     margin: 0;
     position: absolute;
     top: 50%;
