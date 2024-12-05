@@ -33,6 +33,9 @@ const translations = {
         portfolioTitle: "지금까지 완성했던 작업물",
         contactTitle: "궁금한 점이 있으세요?",
 
+        "__comment": "section explanations"
+        serviceExplanation: "저희 스튜디오는 디지털 디자인 또는 아트와 관련된 여러 서비스를 제공합니다. 포토샵·일러스트레이터·프리미어프로·에프터이펙 등 어도비 계열 프로그램, MS오피스 프로그램, Medibang과 같은 페인팅 프로그램 등 다양한 소프트웨어를 광범위하게 활용하여 작업합니다. 저희 주요 소비자층은 개인 주문자로, 데뷔한 지 얼마 되지 않은 음반 아티스트나 소규모 유튜버의 의뢰를 자주 받습니다. 이를 감안하여 저렴한 가격에 소비자가 만족할 만한 결과물을 제공하도록 노력하고 있습니다.",
+
         firstSlideTitle: "첫 번째 슬라이드",
         firstSlideDescription: "첫 번째 슬라이드의 설명입니다.",
         secondSlideTitle: "두 번째 슬라이드",
