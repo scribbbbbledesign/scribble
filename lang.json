@@ -1,9 +1,16 @@
 const translations = {
     en: {
+        "__comment": "nav",
         home: "Home",
         services: "Services",
         portfolio: "Portfolio",
         contacts: "Contacts",
+
+        "__comment": "section names",
+        servicesTitle: "What service are you looking for?",
+        portfolioTitle: "What we've already done",
+        contactTitle: "Have any questions?",
+
         firstSlideTitle: "First Slide",
         firstSlideDescription: "This is the first slide's description.",
         secondSlideTitle: "Second Slide",
@@ -15,10 +22,17 @@ const translations = {
         footer: "&copy; 2024 My Website | All Rights Reserved"
     },
     ko: {
+        "__comment": "nav",
         home: "홈",
         services: "서비스",
         portfolio: "포트폴리오",
         contacts: "연락처",
+
+        "__comment": "section names",
+        servicesTitle: "어떤 서비스를 찾으시나요?",
+        portfolioTitle: "지금까지 완성했던 작업물",
+        contactTitle: "궁금한 점이 있으세요?",
+
         firstSlideTitle: "첫 번째 슬라이드",
         firstSlideDescription: "첫 번째 슬라이드의 설명입니다.",
         secondSlideTitle: "두 번째 슬라이드",
@@ -30,10 +44,17 @@ const translations = {
         footer: "&copy; 2024 내 웹사이트 | 모든 권리 보유"
     },
     ru: {
+        "__comment": "nav",
         home: "Главная",
         services: "Услуги",
         portfolio: "Портфолио",
         contacts: "Контакты",
+
+        "__comment": "section names",
+        servicesTitle: "Какую услугу вы ищете?",
+        portfolioTitle: "Это мы уже сделали",
+        contactTitle: "Есть вопросы?",
+
         firstSlideTitle: "Первый слайд",
         firstSlideDescription: "Это описание первого слайда.",
         secondSlideTitle: "Второй слайд",
