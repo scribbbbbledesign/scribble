@@ -60,3 +60,7 @@
 #scrollToTopBtn:hover {
     opacity: 1; /* 마우스 오버 시 버튼을 더 선명하게 표시 */
 }
+
+.card-title {
+    font-family: stetica;
+}
