@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribble Studio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-bright bg-bright">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="text-align: left; white-space: nowrap;">
+                <img src="img/logo" alt="" style="height: 20px; margin-right: 10px; margin-left: 10px;">
+                <span style="font-family: stetica;">Scribble </span>
+                <span style="font-family: stetica-light;">Studio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Empty Space -->
+                <div class="flex-grow-1"></div>
+
+                <!-- Language Selector -->
+                <select id="languageSelector" class="form-select" style="max-width: 120px; margin-right: 20px;">
+                    <option value="ko" selected>
+                        한국어
+                    </option>
+                    <option value="en">
+                       English
+                    </option>
+                    <option value="ru">
+                        Русский
+                    </option>
+                </select>
+
+                <!-- Menu Items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#" data-key="home">홈</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-key="services">서비스</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-key="portfolio">포트폴리오</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-key="contacts">연락처</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        
+        <!-- Slides -->
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 data-key="firstSlideTitle">첫 번째 슬라이드</h5>
+                    <p data-key="firstSlideDescription">첫 번째 슬라이드의 설명입니다.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 data-key="secondSlideTitle">두 번째 슬라이드</h5>
+                    <p data-key="secondSlideDescription">두 번째 슬라이드의 설명입니다.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 data-key="thirdSlideTitle">세 번째 슬라이드</h5>
+                    <p data-key="thirdSlideDescription">세 번째 슬라이드의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+    <!-- Services Section -->
+
+    <!-- Services Section -->
+<div class="container py-5" id="services">
+    <h2 class="text-center mb-4" data-key="servicesTitle">우리의 서비스</h2>
+    <div class="row">
+        <!-- Service 1 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 1">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service1Title">서비스 1</h5>
+                    <p class="card-text" data-key="service1Description">서비스 1의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 2">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service2Title">서비스 2</h5>
+                    <p class="card-text" data-key="service2Description">서비스 2의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 3">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service3Title">서비스 3</h5>
+                    <p class="card-text" data-key="service3Description">서비스 3의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 4 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 4">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service4Title">서비스 4</h5>
+                    <p class="card-text" data-key="service4Description">서비스 4의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row 2 -->
+    <div class="row">
+        <!-- Service 5 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 5">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service5Title">서비스 5</h5>
+                    <p class="card-text" data-key="service5Description">서비스 5의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 6 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 6">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service6Title">서비스 6</h5>
+                    <p class="card-text" data-key="service6Description">서비스 6의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 7 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 7">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service7Title">서비스 7</h5>
+                    <p class="card-text" data-key="service7Description">서비스 7의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 8 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 8">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service8Title">서비스 8</h5>
+                    <p class="card-text" data-key="service8Description">서비스 8의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row 3 -->
+    <div class="row">
+        <!-- Service 9 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 9">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service9Title">서비스 9</h5>
+                    <p class="card-text" data-key="service9Description">서비스 9의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 10 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 10">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service10Title">서비스 10</h5>
+                    <p class="card-text" data-key="service10Description">서비스 10의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 11 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 11">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service11Title">서비스 11</h5>
+                    <p class="card-text" data-key="service11Description">서비스 11의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 12 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 12">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service12Title">서비스 12</h5>
+                    <p class="card-text" data-key="service12Description">서비스 12의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row 4 -->
+    <div class="row">
+        <!-- Service 13 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 13">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service13Title">서비스 13</h5>
+                    <p class="card-text" data-key="service13Description">서비스 13의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 14 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 14">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service14Title">서비스 14</h5>
+                    <p class="card-text" data-key="service14Description">서비스 14의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 15 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 15">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service15Title">서비스 15</h5>
+                    <p class="card-text" data-key="service15Description">서비스 15의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 16 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 16">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service16Title">서비스 16</h5>
+                    <p class="card-text" data-key="service16Description">서비스 16의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Row 5 -->
+    <div class="row">
+        <!-- Service 17 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 17">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service17Title">서비스 17</h5>
+                    <p class="card-text" data-key="service17Description">서비스 17의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 18 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 18">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service18Title">서비스 18</h5>
+                    <p class="card-text" data-key="service18Description">서비스 18의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 19 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 19">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service19Title">서비스 19</h5>
+                    <p class="card-text" data-key="service19Description">서비스 19의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Service 20 -->
+        <div class="col-md-3 mb-4">
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 20">
+                <div class="card-body">
+                    <h5 class="card-title" data-key="service20Title">서비스 20</h5>
+                    <p class="card-text" data-key="service20Description">서비스 20의 설명입니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Portfolio Section -->
+<div class="container py-5" id="portfolio">
+    <h2 class="text-center mb-4" data-key="portfolioTitle">포트폴리오</h2>
+    
+    <!-- Row for Collage -->
+    <div class="row g-4">
+        <!-- Large Image 1 -->
+        <div class="col-md-8">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/800x400" class="img-fluid" alt="Portfolio Image 1">
+            </div>
+        </div>
+
+        <!-- Small Image 1 -->
+        <div class="col-md-4">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Portfolio Image 2">
+            </div>
+        </div>
+
+        <!-- Small Image 2 -->
+        <div class="col-md-4">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Portfolio Image 3">
+            </div>
+        </div>
+
+        <!-- Medium Video -->
+        <div class="col-md-6">
+            <div class="portfolio-item">
+                <iframe src="https://www.youtube.com/embed/your_video_id" class="img-fluid" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Small Image 3 -->
+        <div class="col-md-4">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Portfolio Image 4">
+            </div>
+        </div>
+
+        <!-- Large Image 2 (Collage Effect) -->
+        <div class="col-md-8">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/800x600" class="img-fluid" alt="Portfolio Image 5">
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="col-md-6">
+            <div class="portfolio-item">
+                <iframe src="https://www.youtube.com/embed/your_video_id" class="img-fluid" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Small Image 4 -->
+        <div class="col-md-4">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/400x300" class="img-fluid" alt="Portfolio Image 6">
+            </div>
+        </div>
+
+        <!-- Large Image 3 (Featured) -->
+        <div class="col-md-12">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/1200x500" class="img-fluid" alt="Portfolio Image 7">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<div class="container py-5" id="contacts">
+    <h2 class="text-center mb-4" data-key="contactTitle">연락처</h2>
+    <div class="row justify-content-center">
+        <!-- Contact Info (Phone, Email, Social Media) -->
+        <div class="col-md-4">
+            <div class="contact-item text-center">
+                <h5 data-key="phoneTitle">전화번호</h5>
+                <p><a href="tel:+1234567890">+1 234 567 890</a></p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="contact-item text-center">
+                <h5 data-key="emailTitle">이메일</h5>
+                <p><a href="mailto:contact@example.com">contact@example.com</a></p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="contact-item text-center">
+                <h5 data-key="socialTitle">소셜 미디어</h5>
+                <!-- Social Media Links -->
+                <div class="d-flex justify-content-center">
+                    <a href="https://www.facebook.com" target="_blank" class="mx-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="mx-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Twitter_Logo_As_of_2021.svg" alt="Twitter" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="https://www.instagram.com" target="_blank" class="mx-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg" alt="Instagram" style="width: 30px; height: 30px;">
+                    </a>
+                    <a href="https://www.linkedin.com" target="_blank" class="mx-2">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/LinkedIn_Logo_2022.svg" alt="LinkedIn" style="width: 30px; height: 30px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+    
+    <footer class="bg-dark text-white text-center py-3">
+        <p data-key="footer">&copy; 2024 내 웹사이트 | 모든 권리 보유</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        
+
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const selectedLanguage = this.value;
+            const elements = document.querySelectorAll('[data-key]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[selectedLanguage] && translations[selectedLanguage][key]) {
+                    element.innerHTML = translations[selectedLanguage][key];
+                }
+            });
+        });
+
+        // 기본 언어를 한국어로 설정
+        document.getElementById('languageSelector').value = 'ko';
+        const event = new Event('change');
+        document.getElementById('languageSelector').dispatchEvent(event);
+    </script>
+    <script>
+        // "서비스" 버튼을 클릭하면 서비스 섹션으로 부드럽게 스크롤
+        document.querySelector('[data-key="services"]').addEventListener('click', function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth' // 부드러운 스크롤 효과
+            });
+        });
+    </script>
+    <script>
+        // "포트폴리오" 버튼을 클릭하면 서비스 섹션으로 부드럽게 스크롤
+        document.querySelector('[data-key="portfolio"]').addEventListener('click', function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            document.getElementById('portfolio').scrollIntoView({
+                behavior: 'smooth' // 부드러운 스크롤 효과
+            });
+        });
+    </script>
+    <script>
+        // "연락처" 버튼을 클릭하면 서비스 섹션으로 부드럽게 스크롤
+        document.querySelector('[data-key="contacts"]').addEventListener('click', function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            document.getElementById('contacts').scrollIntoView({
+                behavior: 'smooth' // 부드러운 스크롤 효과
+            });
+        });
+    </script>
+    
+    <script src="lang.json"></script>
+    <script src="services.js"></script>
+</body>
+</html>
