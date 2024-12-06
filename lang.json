@@ -14,19 +14,19 @@ const translations = {
         "__comment": "section explanations",
         serviceExplanation: "Our studio offers various services in the field of digital design and art. We work extensively with a veriety of different software such as photoshop, illustrator, premiere pro, after effects and other Adobe programs; MS office programs, drawing programs such as Medibang or clip studio and others. Most of our customers are begining youtubers and music artists, this is why we try to offer satisfactory results at an affordable price.",
         portfolioExplanation: "Our orientation point in design is minimalism alongside latest trends, which can be seen in the Scribble's BI and this website. However, depending on the work's context or the customer's request we may change the style of the project. The projects below will help you understand our work style and capabilities.",
-        contactsExplanation: "If you have any questions or want to place an order, don't hesitate to reach us! We will reply as soon as possible to consult or help placing an order.",
+        contactsExplanation: "If you have any questions or want to place an order, don't hesitate to reach us! We will reply as soon as possible to consult you or help place an order.",
 
         "__comment": "services",
         service1Title: "Album cover design",
         service2Title: "Logo design",
         service3Title: "SNS profile/banners",
-        service4Title: "intros/video editing",
+        service4Title: "Motion graphics/video editing",
         service5Title: "Website/UI design",
         service6Title: "Image processing",
         service7Title: "Digital art",
         service8Title: "Presentations",
         service9Title: "Help on Microsoft Office",
-        service10Title: "Help on installing OS/using a PC",
+        service10Title: "Help on installing an OS/using a PC",
 
         firstSlideTitle: "First Slide",
         firstSlideDescription: "This is the first slide's description.",
@@ -36,7 +36,12 @@ const translations = {
         thirdSlideDescription: "This is the third slide's description.",
         featureOne: "Feature One",
         learnMore: "Learn More",
-        footer: "&copy; 2024 My Website | All Rights Reserved"
+        footer: "&copy; 2024 My Website | All Rights Reserved",
+
+        "__comment": "contacts",
+        phoneTitle: "Telephone",
+        emailTitle: "e-mail",
+        socialTitle: "Social media"
     },
     ko: {
         "__comment": "nav",
@@ -59,7 +64,7 @@ const translations = {
         service1Title: "앨범아트 디자인",
         service2Title: "로고 디자인",
         service3Title: "SNS 프로필/배너 제작",
-        service4Title: "인트로 제작/영상편집",
+        service4Title: "모션그래픽/영상편집",
         service5Title: "웹사이트/UI 디자인",
         service6Title: "이미지 프로세싱",
         service7Title: "디지털 아트",
@@ -75,7 +80,12 @@ const translations = {
         thirdSlideDescription: "세 번째 슬라이드의 설명입니다.",
         featureOne: "기능 하나",
         learnMore: "자세히 보기",
-        footer: "&copy; 2024 내 웹사이트 | 모든 권리 보유"
+        footer: "&copy; 2024 내 웹사이트 | 모든 권리 보유",
+
+        "__comment": "contacts",
+        phoneTitle: "전화번호",
+        emailTitle: "e-mail",
+        socialTitle: "SNS"
     },
     ru: {
         "__comment": "nav",
@@ -98,7 +108,7 @@ const translations = {
         service1Title: "Дизайн обложки музыкального альбома",
         service2Title: "Дизайн логотипа",
         service3Title: "Профильные фото/баннеры для соцсетей",
-        service4Title: "Вступления/видеомонтаж",
+        service4Title: "Анимационный дизайн/видеомонтаж",
         service5Title: "Дизайн сайтов/UI",
         service6Title: "Обработка изображений",
         service7Title: "Цифровое искусство",
@@ -114,6 +124,11 @@ const translations = {
         thirdSlideDescription: "Это описание третьего слайда.",
         featureOne: "Функция 1",
         learnMore: "Узнать больше",
-        footer: "&copy; 2024 Мой сайт | Все права защищены"
+        footer: "&copy; 2024 Мой сайт | Все права защищены",
+
+        "__comment": "contacts",
+        phoneTitle: "Телефон",
+        emailTitle: "Почта",
+        socialTitle: "Социальные сети"
     }
 };

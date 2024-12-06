@@ -64,3 +64,11 @@
 .card-title {
     font-family: stetica;
 }
+
+.expandonhover {
+    transition: transform 0.3s ease;
+}
+
+.expandonhover:hover {
+    transform: scale(1.1);
+}
