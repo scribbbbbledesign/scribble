@@ -49,53 +49,90 @@
         </div>
     </nav>
 
-    <!-- Carousel -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-        <!-- Indicators -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        
-        <!-- Slides -->
-        <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 1">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 data-key="firstSlideTitle">첫 번째 슬라이드</h5>
-                    <p data-key="firstSlideDescription">첫 번째 슬라이드의 설명입니다.</p>
-                </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 2">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 data-key="secondSlideTitle">두 번째 슬라이드</h5>
-                    <p data-key="secondSlideDescription">두 번째 슬라이드의 설명입니다.</p>
-                </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-                <img src="https://via.placeholder.com/1200x400" class="d-block w-100" alt="Slide 3">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5 data-key="thirdSlideTitle">세 번째 슬라이드</h5>
-                    <p data-key="thirdSlideDescription">세 번째 슬라이드의 설명입니다.</p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Navigation Buttons -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+    <div class="custom-carousel">
+    <div class="custom-carousel-track">
+        <div class="custom-slide"><img src="https://picsum.photos/1200/300?random=1" alt="Slide 1"></div>
+        <div class="custom-slide"><img src="https://picsum.photos/1200/300?random=2" alt="Slide 2"></div>
+        <div class="custom-slide"><img src="https://picsum.photos/1200/300?random=3" alt="Slide 3"></div>
     </div>
+    <div class="custom-carousel-buttons">
+        <button class="custom-button custom-prev" style="margin-left: 20px;">&#10094;</button>
+        <button class="custom-button custom-next" style="margin-right: 20px;">&#10095;</button>
+    </div>
+    <div class="custom-indicators">
+        <span class="custom-indicator active" data-slide="0"></span>
+        <span class="custom-indicator" data-slide="1"></span>
+        <span class="custom-indicator" data-slide="2"></span>
+    </div>
+</div>
+
+<script>
+    const track = document.querySelector('.custom-carousel-track');
+    const slides = Array.from(track.children);
+    const nextButton = document.querySelector('.custom-next');
+    const prevButton = document.querySelector('.custom-prev');
+    const indicators = document.querySelectorAll('.custom-indicator');
+    let currentIndex = 0;
+    const slideInterval = 3000; // 3초 간격으로 슬라이드 전환
+    let autoSlide;
+
+    // 업데이트 함수
+    function updateCarousel() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        indicators.forEach((indicator, index) => {
+            indicator.classList.toggle('active', index === currentIndex);
+        });
+    }
+
+    // 다음 슬라이드로 이동
+    function goToNextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateCarousel();
+    }
+
+    // 이전 슬라이드로 이동
+    function goToPrevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        updateCarousel();
+    }
+
+    // 자동 슬라이드 시작
+    function startAutoSlide() {
+        autoSlide = setInterval(goToNextSlide, slideInterval);
+    }
+
+    // 자동 슬라이드 중지
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    // 버튼 클릭 이벤트
+    nextButton.addEventListener('click', () => {
+        goToNextSlide();
+        stopAutoSlide(); // 사용자 클릭 시 자동 슬라이드 중지
+        startAutoSlide(); // 다시 자동 슬라이드 시작
+    });
+
+    prevButton.addEventListener('click', () => {
+        goToPrevSlide();
+        stopAutoSlide(); // 사용자 클릭 시 자동 슬라이드 중지
+        startAutoSlide(); // 다시 자동 슬라이드 시작
+    });
+
+    // 인디케이터 클릭 이벤트
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            currentIndex = index;
+            updateCarousel();
+            stopAutoSlide(); // 사용자 클릭 시 자동 슬라이드 중지
+            startAutoSlide(); // 다시 자동 슬라이드 시작
+        });
+    });
+
+    // 페이지 로드 시 자동 슬라이드 시작
+    startAutoSlide();
+
+</script>
     
     <!-- Services Section -->
 
@@ -162,10 +199,10 @@
         <!-- Service 6 -->
         <a href="" class="col-md-3 mb-4 expandonhover" style="text-decoration: none;">
             <div class="card">
-                <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Service 6">
+                <img src="img/serviceicon/service06.png" class="card-img-top" alt="Service 6">
                 <div class="card-body">
                     <h5 class="card-title" data-key="service6Title">이미지 프로세싱</h5>
-                    <p class="card-text" data-key="service6Description">서비스 6의 설명입니다.</p>
+                    <p class="card-text" data-key="service6Description">파일 확장자 변환, 해상도 조정, 오리기, 회전 등 다양한 보정과 편집을 합니다.</p>
                 </div>
             </div>
         </a>
@@ -224,6 +261,68 @@
     <br>
     <br>
     <h2>앨범 아트</h2>
+
+    <div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img" style="background-image: url(img/portfolio/aecheoga.png);">
+                                    <img src="img/portfolio/aecheoga.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img">
+                                    <img src="img/portfolio/mirror.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img">
+                                    <img src="img/portfolio/glass.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>		
+    </div>
+    <script>
+        let items = document.querySelectorAll('.carousel .carousel-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i=1; i<minPerSlide; i++) {
+                if (!next) {
+                // wrap carousel by using first child
+                next = items[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
     <h2>로고</h2>
     <h2>기타</h2>
     <!-- Row for Collage -->
@@ -237,9 +336,7 @@
                 <img src="img/portfolio/biomium_full.png" alt="" style="width: 100%; margin-top: 50px;" class="expandonhover">
             </a>
         </div>
-        <a href="" style="width: 30%; float: right; margin-left: 50px;">
-            <img src="img/portfolio/aecheoga.png" alt="" style="width: 100%; border-radius: 20px; box-shadow: 0px 0px 20px rgb(195, 195, 195); margin-top: 50px;" class="expandonhover">
-        </a>
+        
         <div style="margin-top: 50px;">
             <a href="" style="width: 25%; float: left;">
                 <img src="img/portfolio/IvailoRaves.png" alt="" style="width: 100%; border-radius: 20px;" class="expandonhover">
@@ -270,9 +367,7 @@
         </a>
         <div style="margin-top: 50px;">
             <div style="border: 0px solid blue; width: 60%;">
-                <a href="" style="width: 25%; float: left;">
-                    <img src="img/portfolio/mirror.png" alt="" style="width: 100%; border-radius: 20px; box-shadow: 0px 0px 20px rgb(205, 205, 205);" class="expandonhover">
-                </a>
+                
                 <a href="" style="width: 70%; float: left;">
                     <img src="img/portfolio/overfly.png" alt="" style="width: 100%;" class="expandonhover">
                 </a>
@@ -339,7 +434,7 @@
 
     
     <footer class="bg-bright text-black text-center py-3" style="background-color: rgb(225, 225, 225);">
-        <p data-key="footer">&copy; 2024 Scribble | 모든 권리 보유</p>
+        <p data-key="footer" style="font-family: stetica;">&copy; 2024 Scribble | 모든 권리 보유</p>
     </footer>
 
     <!-- Bootstrap Bundle with Popper -->
@@ -415,7 +510,24 @@ scrollToTopBtn.addEventListener('click', () => {
 });
 
     </script>
-    
+    <!--portfolio carousel-->
+    <script>
+        let items = document.querySelectorAll('.carouselm .carouselm-item')
+
+        items.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i=1; i<minPerSlide; i++) {
+                if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+        }
+        })
+    </script>
     <script src="lang.json"></script>
     <script src="services.js"></script>
 </body>
