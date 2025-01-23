@@ -70,5 +70,127 @@
 }
 
 .expandonhover:hover {
-    transform: scale(1.1);
+    transform: scale(1.03);
+}
+
+.card-text {
+    font-size: 13px;
+}
+
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+    transform: translateX(0);
+}
+
+.portfolio-card {
+    margin: 20px;
+}
+
+.card {
+    border: none;
+    filter: drop-shadow(0 0 0.7rem rgb(221, 221, 221));
+}
+
+.custom-carousel {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+.custom-carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.custom-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.custom-slide img {
+    width: 100%;
+    display: block;
+}
+
+.custom-carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.custom-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.custom-indicators {
+    position: absolute;
+    bottom: 10px; /* 사진의 아래쪽에 표시 */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 2; /* 사진 위에 표시되도록 우선순위 설정 */
+}
+
+.custom-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* 약간 투명한 흰색 */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.custom-indicator.active {
+    background-color: rgba(255, 255, 255, 1); /* 활성화된 점은 더 불투명하게 */
 }
