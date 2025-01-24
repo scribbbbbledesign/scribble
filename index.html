@@ -8,6 +8,23 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/icon.png">
+    <style>
+        .logo-item img {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .carousel-control-prev-icon {
+            -webkit-filter: drop-shadow(0px 0px 5px #000000);
+            filter: drop-shadow(0px 0px 5px 10px #000000);
+        }
+
+        .carousel-control-next-icon {
+            -webkit-filter: drop-shadow(0px 0px 5px #000000);
+            filter: drop-shadow(0px 0px 5px 10px #000000);
+        }
+    </style>
 </head>
 <body>
     <!-- Scroll to Top Button -->
@@ -56,8 +73,8 @@
         <div class="custom-slide"><img src="https://picsum.photos/1200/300?random=3" alt="Slide 3"></div>
     </div>
     <div class="custom-carousel-buttons">
-        <button class="custom-button custom-prev" style="margin-left: 20px;">&#10094;</button>
-        <button class="custom-button custom-next" style="margin-right: 20px;">&#10095;</button>
+        <button class="custom-button custom-prev carousel-control-prev-icon" style="margin-left: 20px;"></button>
+        <button class="custom-button custom-next carousel-control-next-icon" style="margin-right: 20px;"></button>
     </div>
     <div class="custom-indicators">
         <span class="custom-indicator active" data-slide="0"></span>
@@ -261,7 +278,7 @@
     <br>
     <br>
     <h2>앨범 아트</h2>
-
+    <!--비율 1:1-->
     <div class="container text-center my-3">
         <div class="row mx-auto my-auto justify-content-center">
             <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -269,8 +286,8 @@
                     <div class="carousel-item active">
                         <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
                             <div class="card portfolio-card">
-                                <div class="card-img" style="background-image: url(img/portfolio/aecheoga.png);">
-                                    <img src="img/portfolio/aecheoga.png" class="img-fluid">
+                                <div class="card-img">
+                                    <img src="img/portfolio/album-arts/aecheoga.png" class="img-fluid">
                                 </div>
                                 <div class="card-img-overlay"></div>
                             </div>
@@ -280,7 +297,7 @@
                         <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
                             <div class="card portfolio-card">
                                 <div class="card-img">
-                                    <img src="img/portfolio/mirror.png" class="img-fluid">
+                                    <img src="img/portfolio/album-arts/mirror.png" class="img-fluid">
                                 </div>
                                 <div class="card-img-overlay"></div>
                             </div>
@@ -290,7 +307,7 @@
                         <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
                             <div class="card portfolio-card">
                                 <div class="card-img">
-                                    <img src="img/portfolio/glass.png" class="img-fluid">
+                                    <img src="img/portfolio/album-arts/glass.png" class="img-fluid">
                                 </div>
                                 <div class="card-img-overlay"></div>
                             </div>
@@ -324,18 +341,82 @@
         })
     </script>
     <h2>로고</h2>
+
+    <div class="container text-center my-3">
+        <div class="row mx-auto my-auto justify-content-center">
+            <div id="logoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item logo-item active">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img">
+                                    <img src="img/portfolio/logos/Backspace.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item logo-item">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img">
+                                    <img src="img/portfolio/logos/scribble_full.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item logo-item">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img">
+                                    <img src="img/portfolio/logos/biomium_full.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item logo-item">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img">
+                                    <img src="img/portfolio/logos/overfly.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev bg-transparent w-aut" href="#logoCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next bg-transparent w-aut" href="#logoCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+        </div>		
+    </div>
+    <script>
+        let logoitems = document.querySelectorAll('.carousel .logo-item')
+
+        logoitems.forEach((el) => {
+            const minPerSlide = 4
+            let next = el.nextElementSibling
+            for (var i=1; i<minPerSlide; i++) {
+                if (!next) {
+                // wrap carousel by using first child
+                next = logoitems[0]
+                }
+                let cloneChild = next.cloneNode(true)
+                el.appendChild(cloneChild.children[0])
+                next = next.nextElementSibling
+            }
+        })
+    </script>
     <h2>기타</h2>
     <!-- Row for Collage -->
     <div class="row g-4" style="border: red 0px solid; margin-bottom: 50px;">
 
-        <div style="border: blue 0px solid; width: 60%;">
-            <a href="">
-                <img src="img/portfolio/scribble_full.png" alt="" style="width: 100%;" class="expandonhover">
-            </a>
-            <a href="">
-                <img src="img/portfolio/biomium_full.png" alt="" style="width: 100%; margin-top: 50px;" class="expandonhover">
-            </a>
-        </div>
         
         <div style="margin-top: 50px;">
             <a href="" style="width: 25%; float: left;">
@@ -358,9 +439,7 @@
             <a href="" style="width: 25%; float: left;">
                 <img src="img/portfolio/kumiho_music.png" alt="" style="width: 100%;" class="expandonhover">
             </a>
-            <a href="" style="width: 65%; float: right;">
-                <img src="img/portfolio/Backspace.png" alt="" style="width: 100%;" class="expandonhover">
-            </a>
+            
         </div>
         <a href="" style="width: 100%; float: right;">
             <img src="img/portfolio/agem.png" alt="" style="width: 100%; border-radius: 20px;" class="expandonhover">
@@ -509,24 +588,6 @@ scrollToTopBtn.addEventListener('click', () => {
     });
 });
 
-    </script>
-    <!--portfolio carousel-->
-    <script>
-        let items = document.querySelectorAll('.carouselm .carouselm-item')
-
-        items.forEach((el) => {
-            const minPerSlide = 4
-            let next = el.nextElementSibling
-            for (var i=1; i<minPerSlide; i++) {
-                if (!next) {
-            // wrap carousel by using first child
-            next = items[0]
-        }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
-        }
-        })
     </script>
     <script src="lang.json"></script>
     <script src="services.js"></script>
