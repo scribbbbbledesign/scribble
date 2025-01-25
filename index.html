@@ -64,10 +64,13 @@
             </div>
         </div>
     </nav>
-
+    <!--Custom-carousel-->
     <div class="custom-carousel">
     <div class="custom-carousel-track">
-        <div class="custom-slide"><img src="https://picsum.photos/1200/300?random=1" alt="Slide 1"></div>
+        <div class="custom-slide">
+            <div style="margin-left: 20%; margin-top: 5%;">
+                <h1 style="font-size: 400%;"><b style="text-emphasis: circle; text-emphasis-position: over right;">저렴</b>하게<br>제작받자!</h1><p>포트폴리오를 만들기 위해 서비스를 저렴하게 제공하고 있습니다.</p></div>
+            </div>
         <div class="custom-slide"><img src="https://picsum.photos/1200/300?random=2" alt="Slide 2"></div>
         <div class="custom-slide"><img src="https://picsum.photos/1200/300?random=3" alt="Slide 3"></div>
     </div>
@@ -143,6 +146,39 @@
             stopAutoSlide(); // 사용자 클릭 시 자동 슬라이드 중지
             startAutoSlide(); // 다시 자동 슬라이드 시작
         });
+    });
+
+    // 터치 시작 이벤트
+    track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+            stopAutoSlide(); // 터치 시 자동 슬라이드 중지
+        });
+
+    // 터치 이동 이벤트
+    track.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+
+        // 페이지 스크롤 방지
+        e.preventDefault();
+    });
+
+
+
+    // 터치 종료 이벤트
+    track.addEventListener('touchend', () => {
+        if (!isDragging) return;
+        const diff = currentX - startX;
+
+        if (diff > 50) {
+            goToPrevSlide(); // 오른쪽으로 스와이프
+        } else if (diff < -50) {
+            goToNextSlide(); // 왼쪽으로 스와이프
+        }
+
+        isDragging = false;
+        startAutoSlide(); // 터치 종료 후 자동 슬라이드 다시 시작
     });
 
     // 페이지 로드 시 자동 슬라이드 시작
@@ -379,13 +415,24 @@
                         <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
                             <div class="card portfolio-card">
                                 <div class="card-img">
-                                    <img src="img/portfolio/logos/backspace.png" class="img-fluid">
+                                    <img src="img/portfolio/logos/kumiho.png" class="img-fluid">
+                                </div>
+                                <div class="card-img-overlay"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item logo-item">
+                        <div class="col-md-3 expandonhover" style="margin-top: 3%; margin-bottom: 3%;">
+                            <div class="card portfolio-card">
+                                <div class="card-img">
+                                    <img src="img/portfolio/logos/ssambbong.png" class="img-fluid">
                                 </div>
                                 <div class="card-img-overlay"></div>
                             </div>
                         </div>
                     </div>
                 </div>
+                
                 <a class="carousel-control-prev bg-transparent w-aut" href="#logoCarousel" role="button" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 </a>
@@ -429,9 +476,7 @@
             </a>
         </div>
         <div style="margin-top: 50px;">
-            <a href="" style="width: 47%; float: left;">
-                <img src="img/portfolio/kumiho_banner.png" alt="" style="width: 100%; border-radius: 20px;" class="expandonhover">
-            </a>
+            
             <video src="img/portfolio/eldana_motion.mp4" style="width: 47%; float: right; border-radius: 20px;" controls></video>
         </div>
         <div style="margin-top: 50px;">
@@ -453,9 +498,7 @@
                     <img src="img/portfolio/yeou.png" alt="" style="width: 100%; border-radius: 20px; box-shadow: 0px 0px 20px rgb(205, 205, 205); margin-top: 50px;" class="expandonhover">
                 </a>
             </div>
-            <a href="" style="width: 30%; float: right; margin-top: -10%;">
-                <img src="img/portfolio/sd.gif" alt="" style="width: 100%; border-radius: 20px;" class="expandonhover">
-            </a>
+            
         </div>
     </div>
 </div>
