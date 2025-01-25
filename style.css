@@ -137,6 +137,8 @@
 .custom-slide {
     min-width: 100%;
     box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
 }
 
 .custom-slide img {
