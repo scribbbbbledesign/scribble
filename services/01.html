@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scribble Design</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        .image, .text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="btn btn-bright" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 1000; border-radius: 50%; width: 50px; height: 50px; border-color: black;">
+        ▲
+    </button>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-bright bg-bright">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html" style="text-align: left; white-space: nowrap;">
+                <img src="../img/logo.png" alt="" style="height: 20px; margin-right: 10px; margin-left: 10px;">
+                <span style="font-family: stetica;">Scribble </span>
+                <span style="font-family: stetica-light;">Design</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Empty Space -->
+                <div class="flex-grow-1"></div>
+
+                <!-- Menu Items -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html" data-key="home" style="font-family: stetica;">홈</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="image">
+            <img src="../img/serviceicon/service01.png" alt="예제 이미지">
+        </div>
+        <div class="text">
+            <h1>앨범아트 디자인</h1>
+            <p>음원을 시각적으로 표현할 최고의 방법을 모색하여 정서와 분위기를 효과적으로 전달할 수 있는 앨범 아트를 제작합니다.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    
+    <footer class="bg-bright text-black text-center py-3" style="background-color: rgb(225, 225, 225);">
+        <p data-key="footer" style="font-family: stetica;">&copy; 2024 Scribble | 모든 권리 보유</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        
+
+        document.getElementById('languageSelector').addEventListener('change', function() {
+            const selectedLanguage = this.value;
+            const elements = document.querySelectorAll('[data-key]');
+
+            elements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[selectedLanguage] && translations[selectedLanguage][key]) {
+                    element.innerHTML = translations[selectedLanguage][key];
+                }
+            });
+        });
+
+        // 기본 언어를 한국어로 설정
+        document.getElementById('languageSelector').value = 'ko';
+        const event = new Event('change');
+        document.getElementById('languageSelector').dispatchEvent(event);
+    </script>
+    <script>
+        // "서비스" 버튼을 클릭하면 서비스 섹션으로 부드럽게 스크롤
+        document.querySelector('[data-key="services"]').addEventListener('click', function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            document.getElementById('services').scrollIntoView({
+                behavior: 'smooth' // 부드러운 스크롤 효과
+            });
+        });
+    </script>
+    <script>
+        // "포트폴리오" 버튼을 클릭하면 포트폴리오 섹션으로 부드럽게 스크롤
+        document.querySelector('[data-key="portfolio"]').addEventListener('click', function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            document.getElementById('portfolio').scrollIntoView({
+                behavior: 'smooth' // 부드러운 스크롤 효과
+            });
+        });
+    </script>
+    <script>
+        // "연락처" 버튼을 클릭하면 연락처 섹션으로 부드럽게 스크롤
+        document.querySelector('[data-key="contacts"]').addEventListener('click', function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            document.getElementById('contacts').scrollIntoView({
+                behavior: 'smooth' // 부드러운 스크롤 효과
+            });
+        });
+    </script>
+    <script>
+        // 맨 위로 스크롤 버튼 요소
+const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+// 스크롤 이벤트 리스너 추가
+window.addEventListener('scroll', () => {
+    // 페이지가 특정 높이 이상 스크롤되면 버튼 표시
+    if (window.scrollY > 300) {
+        scrollToTopBtn.style.display = 'block';
+    } else {
+        scrollToTopBtn.style.display = 'none';
+    }
+});
+
+// 버튼 클릭 시 페이지 맨 위로 스크롤
+scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // 부드러운 스크롤 효과
+    });
+});
+
+    </script>
+    <script src="lang.json"></script>
+    <script src="services.js"></script>
+</body>
+</html>
