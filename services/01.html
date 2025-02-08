@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
+    <link rel="stylesheet" href="../style.css">
     <style>
         * {
             margin: 0;
@@ -81,11 +82,38 @@
             <img src="../img/serviceicon/service01.png" alt="예제 이미지">
         </div>
         <div class="text">
-            <h1>앨범아트 디자인</h1>
+            <h1><b>앨범아트 디자인</b></h1>
             <p>음원을 시각적으로 표현할 최고의 방법을 모색하여 정서와 분위기를 효과적으로 전달할 수 있는 앨범 아트를 제작합니다.</p>
         </div>
     </div>
-
+    <div class="container py-5" id="services">
+        <h2 class="text-left mb-4" data-key="servicesTitle" style="font-family: stetica-bold;">포트폴리오</h2>
+        <p data-key="serviceExplanation" style="font-family: stetica; max-width: 700px;"></p>
+        <br>
+        <br>
+        <div class="row">
+            <!-- 1 -->
+            <a href="services/01.html" class="col-md-4 mb-4 expandonhover" style="text-decoration: none;">
+                <div class="card">
+                    <img src="../img/portfolio/album-arts/aecheoga.png" class="card-img-top" alt="Service 1">
+                    <div class="card-body">
+                        <h5 class="card-title" data-key="service1Title">애처가</h5>
+                        <p class="card-text" data-key="service1Description">김지은</p>
+                    </div>
+                </div>
+            </a>
+            <!-- 2 -->
+            <a href="" class="col-md-4 mb-4 expandonhover" style="text-decoration: none;">
+                <div class="card">
+                    <img src="../img/portfolio/album-arts/mirror.png" class="card-img-top" alt="Service 2">
+                    <div class="card-body">
+                        <h5 class="card-title" data-key="service2Title">거울</h5>
+                        <p class="card-text" data-key="service2Description">에이범</p>
+                    </div>
+                </div>
+            </a>        
+        </div>
+    </div>
 
 
 
@@ -100,26 +128,6 @@
     <!-- Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        
-
-        document.getElementById('languageSelector').addEventListener('change', function() {
-            const selectedLanguage = this.value;
-            const elements = document.querySelectorAll('[data-key]');
-
-            elements.forEach(element => {
-                const key = element.getAttribute('data-key');
-                if (translations[selectedLanguage] && translations[selectedLanguage][key]) {
-                    element.innerHTML = translations[selectedLanguage][key];
-                }
-            });
-        });
-
-        // 기본 언어를 한국어로 설정
-        document.getElementById('languageSelector').value = 'ko';
-        const event = new Event('change');
-        document.getElementById('languageSelector').dispatchEvent(event);
-    </script>
     <script>
         // "서비스" 버튼을 클릭하면 서비스 섹션으로 부드럽게 스크롤
         document.querySelector('[data-key="services"]').addEventListener('click', function (event) {
