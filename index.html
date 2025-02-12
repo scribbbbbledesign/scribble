@@ -57,6 +57,9 @@
                         <a class="nav-link" href="#" data-key="portfolio" style="font-family: stetica;">포트폴리오</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#" data-key="artists" style="font-family: stetica;">소속 아티스트트</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#" data-key="contacts" style="font-family: stetica;">연락처</a>
                     </li>
                 </ul>
@@ -484,6 +487,16 @@
     
 </div>
 
+<!-- Artists Section -->
+<div class="container py-5" id="artists">
+    <h1 class="text-left mb-4" data-key="portfolioTitle" style="font-family: stetica-bold;"><b>소속 아티스트트</b></h1>
+    <p data-key="portfolioExplanation" style="font-family: stetica; max-width: 700px;"></p>
+    <br>
+    <br>
+    <!-- Row for Collage -->
+    
+</div>
+
 <!-- Contact Section -->
 <div class="container py-5" id="contacts">
     <h1 class="text-left mb-4" data-key="contactTitle" style="font-family: stetica-bold;"><b>연락주세요!</b></h1>
@@ -555,6 +568,15 @@
         document.querySelector('[data-key="portfolio"]').addEventListener('click', function (event) {
             event.preventDefault(); // 기본 링크 동작 방지
             document.getElementById('portfolio').scrollIntoView({
+                behavior: 'smooth' // 부드러운 스크롤 효과
+            });
+        });
+    </script>
+    <script>
+        // "소속 아티스트" 버튼을 클릭하면 포트폴리오 섹션으로 부드럽게 스크롤
+        document.querySelector('[data-key="artists"]').addEventListener('click', function (event) {
+            event.preventDefault(); // 기본 링크 동작 방지
+            document.getElementById('artists').scrollIntoView({
                 behavior: 'smooth' // 부드러운 스크롤 효과
             });
         });
